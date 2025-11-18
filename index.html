@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Bubble Shooter - Leaderboard Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui">
+            <div id="score">Score: 0</div>
+            <div id="level">Level: 1</div>
+            <div>Next:</div>
+            <div id="nextBubble"></div>
+            <button id="leaderboardBtn" class="ui-button">Leaderboard</button>
+        </div>
+        
+        <div id="levelSelect" class="modal">
+            <h2>Select Difficulty</h2>
+            <button class="levelButton" data-level="easy">Easy</button>
+            <button class="levelButton" data-level="medium">Medium</button>
+            <button class="levelButton" data-level="hard">Hard</button>
+        </div>
+        
+        <div id="gameOver" class="modal" style="display: none;">
+            <h2>Game Over!</h2>
+            <p id="finalScore">Your Score: 0</p>
+            <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+            <button id="submitScore" class="ui-button">Submit Score</button>
+            <button id="restartButton" class="ui-button">Play Again</button>
+        </div>
+        
+        <div id="leaderboard" class="modal" style="display: none;">
+            <h2>🏆 Leaderboard 🏆</h2>
+            <div class="difficulty-tabs">
+                <button class="tab-button active" data-difficulty="easy">Easy</button>
+                <button class="tab-button" data-difficulty="medium">Medium</button>
+                <button class="tab-button" data-difficulty="hard">Hard</button>
+            </div>
+            <div id="leaderboardList"></div>
+            <button id="closeLeaderboard" class="ui-button">Close</button>
+        </div>
+        
+        <div id="instructions">
+            <p><strong>Controls:</strong></p>
+            <p>🎯 Move mouse to aim</p>
+            <p>🖱️ Click to shoot</p>
+            <p>💥 Match 3+ bubbles to pop</p>
+            <p>🎮 Clear all bubbles to advance</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
